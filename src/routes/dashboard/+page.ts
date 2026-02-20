@@ -1,8 +1,8 @@
-import type { PageServerLoad } from './$types';
+import type { PageLoad } from './$types';
 import { fetchNotesToHarvest } from '$lib/services/notes';
 import { mapApiStatusToDisplay, type HarvestItem } from '$lib/types/api';
 
-export const load: PageServerLoad = async ({ fetch }) => {
+export const load: PageLoad = async ({ fetch }) => {
 	try {
 		const response = await fetchNotesToHarvest({}, fetch);
 

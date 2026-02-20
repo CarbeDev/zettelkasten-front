@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { cn } from '$lib/utils';
-	import { Clock, Pencil, Eye, MoreVertical } from '@lucide/svelte';
+	import { Clock, Eye, MoreVertical } from '@lucide/svelte';
 
 	interface ActivityItem {
 		id: string;
@@ -102,13 +102,6 @@
 							<div
 								class="flex items-center justify-end gap-2 opacity-0 transition-opacity group-hover:opacity-100"
 							>
-								<button
-									type="button"
-									class="rounded p-1.5 text-slate-400 hover:bg-slate-700 hover:text-white"
-									aria-label="Edit note"
-								>
-									<Pencil class="h-4 w-4" />
-								</button>
 								<button
 									type="button"
 									class="rounded p-1.5 text-slate-400 hover:bg-slate-700 hover:text-white"
