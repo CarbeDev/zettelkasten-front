@@ -137,6 +137,13 @@ function formatRelativeDate(dateString: string): string {
 	return `Added ${Math.floor(diffDays / 365)} year${Math.floor(diffDays / 365) > 1 ? 's' : ''} ago`;
 }
 
+// Search Types
+export interface SearchResult {
+	id: string;
+	title: string; // may contain <em>...</em>
+	body: string | null; // may contain <em>...</em>, null if no content
+}
+
 // Types for sorting and pagination
 export type SourceSortField = 'created_at' | 'updated_at' | 'title' | 'author' | 'note_count';
 export type SortDirection = 'asc' | 'desc';
